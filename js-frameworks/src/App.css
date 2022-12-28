@@ -1,0 +1,27 @@
+.navbar-brand { 
+  color: #fff;
+}
+
+.navbar-brand:hover { 
+  color: rgb(174, 169, 169);
+}
+
+.nav-link  { 
+  color: #fff;
+}
+
+.nav-link:hover  { 
+  color: rgb(174, 169, 169);
+  text-decoration: underline;
+}
+
+/*cta*/
+.btn-outline-success { 
+  color: #fff;
+}
+
+.btn-outline-success:hover { 
+  background: #fff;
+  color: green;
+}
+
