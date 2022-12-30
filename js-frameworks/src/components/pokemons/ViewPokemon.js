@@ -5,7 +5,7 @@ import PokemonCard from "./card";
 import { Link, useParams } from "react-router-dom";
 
 export default function ViewPokemon() {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -14,18 +14,18 @@ export default function ViewPokemon() {
   const pokemon_url = BASE_URL + `${id}`;
 
   useEffect(function () {
-    async function retrivePokemons() {
+    async function retrivePokemon() {
       try {
         const response = await axios.get(pokemon_url);
         console.log(response.data);
-        setPokemons(response.data.data);
+        setPokemon(response.data.data);
       } catch (error) {
         setError(error.toString());
       } finally {
         setLoading(false);
       }
     }
-    retrivePokemons();
+    retrivePokemon();
   }, []);
   if (loading) return <div>Loading pokemons...</div>;
 
@@ -33,15 +33,13 @@ export default function ViewPokemon() {
 
   return (
     <div className="pokemon-list">
-      {pokemons.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.id}
-          name={pokemon.name}
-          id={pokemon.id}
-          images={pokemon.images.small}
-          href={pokemon.id}
-        />
-      ))}
+      <PokemonCard
+        key={pokemon.id}
+        name={pokemon.name}
+        id={pokemon.id}
+        images={pokemon.images.small}
+        href={pokemon.id}
+      />
     </div>
   );
 }
