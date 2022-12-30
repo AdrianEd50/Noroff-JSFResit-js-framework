@@ -9,14 +9,6 @@ function Home() {
       <div className="home-content">
         <Heading content="Home" />
 
-        <div id="the-basics">
-          <input
-            className="typeahead"
-            type="text"
-            placeholder="Search for pokemons"
-          />
-        </div>
-
         <ListOfPokemons />
       </div>
       <footer>copyright&copy;</footer>

@@ -95,6 +95,7 @@ export default function ListOfPokemons() {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [search, setSearch] = useState("");
 
   useEffect(function () {
     async function retrivePokemons() {
@@ -116,15 +117,29 @@ export default function ListOfPokemons() {
 
   return (
     <div className="pokemon-list">
-      {pokemons.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.id}
-          name={pokemon.name}
-          id={pokemon.id}
-          images={pokemon.images.small}
-          href={pokemon.id}
-        />
-      ))}
+      <h3>Search</h3>
+      <input
+        type="text"
+        placeholder="Search for pokemons"
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      {pokemons
+        .filter((value) => {
+          if (search === "") {
+            return value;
+          } else if (value.name.toLowerCase().includes(search.toLowerCase())) {
+            return value;
+          }
+        })
+        .map((pokemon) => (
+          <PokemonCard
+            key={pokemon.id}
+            name={pokemon.name}
+            id={pokemon.id}
+            images={pokemon.images.small}
+            href={pokemon.id}
+          />
+        ))}
     </div>
   );
 }
