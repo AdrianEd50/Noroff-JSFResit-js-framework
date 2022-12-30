@@ -5,6 +5,7 @@ import Grass from "./components/Grass";
 import Contact from "./components/contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
+import ViewPokemon from "./components/pokemons/ViewPokemon";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
             <Route path="/grass" element={<Grass />} />
 
             <Route path="/contact" element={<Contact />} />
+
+            <Route path="/pokemons/:id" element={<ViewPokemon />} />
           </Routes>
         </Container>
       </Router>
