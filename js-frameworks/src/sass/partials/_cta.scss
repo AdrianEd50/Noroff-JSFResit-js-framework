@@ -1,0 +1,36 @@
+.btn-outline-success { 
+    color: #fff;
+  }
+  
+  .btn-outline-success:hover { 
+    background: #fff;
+    color: green;
+  }
+  
+  .read-more-cta { 
+      background: rgba(0, 0, 0, 0.9);
+      border: #000;
+      color: #fff;
+      padding: 7px;
+      margin: 10px 10px 10px 30px;
+  }
+  
+  .read-more-cta:hover { 
+    background: rgba(55, 54, 54, 0.9);
+    text-decoration: underline;
+  }
+  
+  .contact-cta { 
+    background: rgba(0, 0, 0, 0.9);
+      border: #000;
+      border-radius: 8px;
+      color: #fff;
+      padding: 7px;
+      margin: 10px 10px 10px 30px;
+      width: 50%;
+      margin-left: 230px;
+  }
+  
+  .contact-cta:hover  { 
+    background: rgba(55, 54, 54, 0.9);
+  }

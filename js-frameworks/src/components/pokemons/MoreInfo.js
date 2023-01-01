@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { BASE_URL } from "../../constants/api";
 import axios from "axios";
-import SinglePokemonCard from "./SinglePokemonCard";
 import { Link, useParams } from "react-router-dom";
-import Heading from "../layout/Heading";
+import MoreInfoCard from "./InfoOfPokemonCard";
+import Heading from "../../components/layout/Heading";
 
-export default function ViewPokemon() {
+export default function PokemonInfo() {
   const [pokemon, setPokemon] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -33,25 +33,27 @@ export default function ViewPokemon() {
   if (error) return <div>{}</div>;
 
   return (
-    <div className="container">
-      <Heading content="Pokemon" />
-
-      <SinglePokemonCard
+    <div className="pokemon-list">
+      <Heading content="Spesific pokemon" />
+      <MoreInfoCard
         key={pokemon.id}
         name={pokemon.name}
         id={pokemon.id}
         images={pokemon.images.small}
         href={pokemon.id}
+        artist={pokemon.artist}
+        types={pokemon.types}
+        nationalPokedexNumbers={pokemon.nationalPokedexNumbers}
         rarity={pokemon.rarity}
+        number={pokemon.number}
         level={pokemon.level}
         hp={pokemon.hp}
+        supertype={pokemon.supertype}
+        retreatCost={pokemon.retreatCost}
+        convertedRetreatCost={pokemon.convertedRetreatCost}
+        subtypes={pokemon.subtypes}
         evolvesFrom={pokemon.evolvesFrom}
       />
-      <button className="info_link">
-        <Link to={`/pokemons/${pokemon.id}/info`}>
-          Click here for more info about the pokemon
-        </Link>
-      </button>
     </div>
   );
 }

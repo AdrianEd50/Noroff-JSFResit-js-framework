@@ -1,11 +1,13 @@
 import "./App.css";
+import "./sass/style.scss";
 import Navigation from "./components/layout/Navigation";
-import Home from "./components/Home";
-import Grass from "./components/Grass";
+import Home from "./components/pokemons/Home/Home";
+import Grass from "./components/pokemons/grass/Grass";
 import Contact from "./components/contact/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import ViewPokemon from "./components/pokemons/ViewPokemon";
+import MoreInfo from "./components/pokemons/MoreInfo";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
             <Route path="/contact" element={<Contact />} />
 
             <Route path="/pokemons/:id" element={<ViewPokemon />} />
+
+            <Route path="/pokemons/:id/info" element={<MoreInfo />} />
           </Routes>
         </Container>
       </Router>

@@ -1,7 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-export default function PokemonCard(pokemon) {
+export default function GrassPokemonCard(pokemon) {
   return (
     <>
       <div className="pokemon-card">
@@ -11,6 +11,11 @@ export default function PokemonCard(pokemon) {
             <Card.Body>
               <Card.Title>
                 <h2>{pokemon.name}</h2>
+                <p> Type: {pokemon.types}</p>
+                <p> Rarity: {pokemon.rarity}</p>
+                <p> Level: {pokemon.level}</p>
+                <p> Hp: {pokemon.hp}</p>
+                <p> Evolvesfrom: {pokemon.evolvesFrom}</p>
               </Card.Title>
               <Card.Text>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

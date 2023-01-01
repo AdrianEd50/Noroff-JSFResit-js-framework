@@ -1,0 +1,27 @@
+.info_link { 
+    background: rgba(0, 0, 0, 0.9);
+    border: #000;
+    padding: 7px;
+    margin-left: 0px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.info_link:hover { 
+  background: rgba(55, 54, 54, 0.9);
+
+}
+
+.info_link a { 
+color: #fff;
+text-decoration: none;
+}
+
+.info_link a:hover { 
+  text-decoration: underline;
+}
+
+.more-info-cta { 
+  background-color:rgba(55, 54, 54, 0.9) ;
+  color: #fff;
+}

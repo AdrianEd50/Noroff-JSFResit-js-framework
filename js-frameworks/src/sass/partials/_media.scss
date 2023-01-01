@@ -1,0 +1,46 @@
+@media (min-width:400px) { 
+    .info_link { 
+        margin-left: 30px;
+    }
+}
+
+@media (min-width:500px) { 
+    .info_link { 
+        margin-left: 60px;
+    }
+}
+
+@media (min-width:650px) { 
+    .info_link { 
+        margin-left: 140px;
+    }
+}
+
+@media (min-width:750px) { 
+    .info_link { 
+        margin-left: 210px;
+    }
+}
+
+@media (min-width:950px) { 
+    .info_link { 
+        margin-left: 290px;
+    }
+}
+
+@media (min-width:1200px) { 
+    .info_link { 
+        margin-left: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* CSS rules to apply when the screen size is 768px or smaller */
+    form {
+        width: 100%;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+  }
